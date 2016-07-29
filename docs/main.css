@@ -8,8 +8,65 @@ h1{
 
 ul{
 	color:black;
+	-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+    -moz-columns: 100px 3; 
+	columns:2;
 }
 
 .center {
     text-align: center;
+}
+
+
+
+
+body{
+	margin:0px 50px 50px 50px;
+}
+
+html{
+	background-color:lightblue;
+}
+
+
+#toggle:checked ~ #expand {
+  height: 250px;
+}
+#toggle:checked ~ label::before {
+  content: "-";
+}
+
+#expand {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  color: #FFF;
+}
+
+label {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  color: #666;
+  font-weight:bold;
+  font-size:20px;
+}
+label:hove
+
+label::before {
+  font-weight: bold;
+  font-size: 15px;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+
+input {
+  display: none;
+  visibility: hidden;
 }
